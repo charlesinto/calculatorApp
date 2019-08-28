@@ -128,19 +128,19 @@ function startApp(){
                     switch(currentOperation){
                         case '+':
                             result += entries[i];
-                            resultContainer.innerHTML = result;
+                            resultContainer.innerHTML = numberWithCommas(''+result)
                             break;
                         case '-':
                             result -= entries[i]
-                            resultContainer.innerHTML = result;
+                            resultContainer.innerHTML = numberWithCommas(''+result);
                             break;
                         case 'X':
                             result *= entries[i]
-                            resultContainer.innerHTML = result;
+                            resultContainer.innerHTML = numberWithCommas(''+result);
                             break;
                         case '/':
                             result /= entries[i]
-                            resultContainer.innerHTML = result;
+                            resultContainer.innerHTML = numberWithCommas(''+result);
                             break;
                     }
                 }
@@ -149,6 +149,20 @@ function startApp(){
             }
 
         }
+    }
+    var numberWithCommas = function (x) {
+        var parts = x.split(".");
+        if(parts.length <= 2){
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            return parts.join('.')
+        }
+        var floatingpoints = '';
+        for(var i = 1; i < parts.length; i++){
+            floatingpoints += parts[i]
+        }
+        var stringArray = [parts[0], floatingpoints]
+        stringArray[0] = stringArray[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return stringArray.join(".");
     }
     return uiCanInteract
 }
