@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+  }
+  
+  .body{
+    overflow-y: auto;
+  }
+  .gradient {
+    background-image:
+      radial-gradient(
+        circle,
+        yellow,
+        #f06d06
+      );
+    width:100%;
+    min-height: 100vh;
+  }
+  
+  .calcutor-body{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    width: 40%;
+    max-width: 350px;
+    min-height: 450px;
+    background: #fff;
+    position: fixed;
+    top: 50px;
+    right: 30px;
+    border: 1px solid #ff9e41;
+    border-radius: 10px;
+  }
+  .shadow{
+    -webkit-box-shadow: 1px 2px 3px 3px#c76f0a;;
+    -moz-box-shadow:1px 2px 3px 3px#c76f0a;
+    box-shadow: 1px 2px 3px 3px #c76f0a;
+   background: 	#808080;
+  }
+  .screen{
+    margin: 0;
+    min-height: 120px;
+    max-height: 150px;
+    background: #fff;
+    border-radius: 10px 10px 0 0; 
+    flex: 0.3;
+  }
+  
+  .main{
+    display:flex;
+    width: 100%;
+    flex: 0.7;
+  }
+  
+  .keypad-action{
+      background: #D3D3D3;
+      min-height: auto;
+      width: 25%;
+      /* border-bottom: 10px; */
+      border-radius: 0 0 10px;
+  }
+  
+  .keypad-number{
+    width: 75%;
+    display: flex;
+  }
+  
+  .keypad-action table, .keypad-number table{
+    border-collapse: collapse;
+    height: 100%;
+    width: 100%;
+  }
+  .keypad-action table tbody, .keypad-number table tbody{
+      display: flex;
+      width: 100%;
+      flex: 1;
+      height: 100%;
+      flex-direction: column;
+      align-items: space-between;
+      justify-content: space-evenly;
+      align-items: stretch;
+  }
+  .keypad-action table tr, .keypad-number table tr{
+        display: flex;
+      justify-content: space-around;
+  }
+  
+  .keypad-number table td{
+      height: 35px;
+      padding: 20px;
+      color: #fff;
+      font-size: 30px;
+      text-align:center;
+      width: 100%;
+  }
+  
+  .keypad-number table td:hover{
+    background: #c76f0a;
+    cursor:pointer;
+  }
+  
+  .keypad-action table tr td{
+    color:#fff;
+    font-size: 20px;
+    padding: 20px;
+    width: 100%;
+    text-align:center;
+    cursor: pointer;
+  }
+  
+  .keypad-action table tr td:hover{
+    background:#a2a2a2;
+  }
+  
+  .text-container{
+      text-align: right;
+      margin: 30px 10px 10px 0;
+      padding: 5px;
+      font-size: 30px;
+      color: #767373cc;
+  }
+  
+  .result{
+    text-align: right;
+    color: #333;
+    /* margin-left: 10px; */
+    padding: 8px;
+    margin-right: 10px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .text-container, .result, td.numbers{
+    font-family: 'Montserrat', sans-serif !important;
+  }
